@@ -1,0 +1,74 @@
+# set PATHS / software versions
+export PATH=/opt/gridware/bioinformatics/java/jdk1.7.0_45/bin:$PATH
+picard_base=/opt/gridware/bioinformatics/picard/picard-tools-1.119/
+bwa_base=/opt/gridware/bioinformatics/bwa/bwa-0.7.10/
+samtools_base=/opt/gridware/bioinformatics/samtools/0.1.19/
+#samtools_base=/opt/gridware/bioinformatics/samtools/1.2-98/bin
+gatk_base=/opt/gridware/bioinformatics/GATK/GenomeAnalysisTK-3.3-0/
+
+# will be loading verifyBamID as a module within the scripts, because it requires some dependencies.
+#/opt/gridware/bioinformatics/verifyBamID/1.1.1/verifyBamID
+verifybamid_1000G_omni25_alleles=/lustre/SCRATCH5/groups/h3a/verifyBamID/Omni25_genotypes_1525_samples_v2.b37.PASS.ALL.sites.vcf.gz
+
+gatk_resource_bundle=/lustre/SCRATCH5/groups/h3a/ftp.broadinstitute.org/bundle/2.8/b37
+ref_seq=$gatk_resource_bundle/human_g1k_v37_decoy.fasta
+dbsnp_sites=$gatk_resource_bundle/dbsnp_138.b37.vcf
+kgp_phase1_indel_sites=$gatk_resource_bundle/1000G_phase1.indels.b37.vcf
+mills_and_1000G_indel_sites=$gatk_resource_bundle/Mills_and_1000G_gold_standard.indels.b37.vcf
+
+tmp_dir=/lustre/SCRATCH5/groups/h3a/tmp
+###################################### 
+
+logs_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/logs
+picard_ready_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/picard_ready
+picard_marked_duplicates_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/picard_marked_duplicates
+gatk_local_realigned_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/gatk_local_realigned
+gatk_bqsr_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/gatk_bqsr
+samtools_calmd_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/samtools_calmd
+verifybamid_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/verifybamid
+variant_call_ready_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/variant_call_ready
+flagstat_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/bam_improvement/baylor/flagstat
+
+pbs_status_mailto=gerrit.botha@uct.ac.za
+
+# other settings
+bam2fastq_mem=11000M 
+bam2fastq_threads=1
+bam2fastq_walltime="24:00:00"
+
+#bwamem_mem=23000M
+# Increasing mem for bwa -> samblasters runs
+bwamem_mem=31000M
+bwamem_threads=12
+bwamem_walltime="48:00:00"
+
+# These settings were for running mark duplicates on picard ready bams
+mark_duplicates_mem=18000M
+mark_duplicates_threads=1
+mark_duplicates_walltime="72:00:00"
+
+picard_mark_duplicates_mem=24000M
+picard_mark_duplicates_threads=1
+picard_mark_duplicates_walltime="12:00:00"
+
+gatk_local_realign_mem=15000M
+gatk_local_realign_data_threads=4
+gatk_local_realign_cpu_threads_per_data_thread=1
+gatk_local_realign_walltime="48:00:00"
+
+gatk_bqsr_mem=31000M
+gatk_bqsr_data_threads=1
+gatk_bqsr_cpu_threads_per_data_thread=8
+gatk_bqsr_walltime="48:00:00"
+
+flagstat_mem=4000M
+flagstat_threads=1
+flagstat_walltime="1:00:00"
+
+samtools_calmd_mem=4000M
+samtools_calmd_threads=1
+samtools_calmd_walltime="72:00:00"
+
+verifybamid_mem=4000M
+verifybamid_threads=1
+verifybamid_walltime="12:00:00"

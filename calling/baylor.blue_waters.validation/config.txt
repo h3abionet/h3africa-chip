@@ -1,0 +1,29 @@
+# set PATHS / software versions
+export PATH=/opt/gridware/bioinformatics/java/jdk1.7.0_45/bin:$PATH
+gatk_base=/opt/gridware/bioinformatics/GATK/GenomeAnalysisTK-3.3-0/
+
+gatk_resource_bundle=/lustre/SCRATCH5/groups/h3a/ftp.broadinstitute.org/bundle/2.8/b37
+ref_seq=$gatk_resource_bundle/human_g1k_v37_decoy.fasta
+dbsnp_sites=$gatk_resource_bundle/dbsnp_138.b37.vcf
+kgp_phase1_indel_sites=$gatk_resource_bundle/1000G_phase1.indels.b37.vcf
+mills_and_1000G_indel_sites=$gatk_resource_bundle/Mills_and_1000G_gold_standard.indels.b37.vcf
+
+tmp_dir=/lustre/SCRATCH5/groups/h3a/tmp
+###################################### 
+
+hc_sites_list=/export/home/gbotha/projects/h3abionet/chipdesign/variant_calling/hc_sites.list
+gender_list=/export/home/gbotha/projects/h3abionet/chipdesign/variant_calling/baylor/baylor.gender.list
+verifybamid_passed_list=/export/home/gbotha/projects/h3abionet/chipdesign/variant_calling/baylor/baylor.verifybamid.passed.list
+
+logs_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/variant_calling/baylor/logs
+
+dm_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/variant_calling/baylor/dm
+ggam_dir=/lustre/SCRATCH5/groups/h3a/chipdesign/variant_calling/baylor/ggam
+
+pbs_status_mailto=gerrit.botha@uct.ac.za
+
+# other settings
+gatk_hc_mem=4000M
+gatk_hc_data_threads=1
+gatk_hc_cpu_threads_per_data_thread=1
+gatk_hc_walltime="24:00:00"
