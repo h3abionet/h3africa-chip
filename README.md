@@ -1,6 +1,6 @@
 
 
-<img src="aux/H3ABioNetlogo2.jpg"/>
+<img src="selection/aux/H3ABioNetlogo2.jpg"/>
 
 # Code used in design of the H3A Genotyping array
 
