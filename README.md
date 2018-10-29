@@ -7,12 +7,13 @@
 
 ## alignment
 
-Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah 
+Alignment code for the individual SAHGP, TrypanoGEN and Baylor datasets. Each dataset folder contains info of how the runs were conducted. 
 
 ## calling
 
-Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah Blah blah blah blah 
+Per sample calling, joint calling and SNP VQSR code for the SAHGP, TrypanoGEN and Baylor datasets. Each dataset folder contains info of how the runs were conducted. 
 
+The `h3a` folder contains the scripts where we joint called the SAHGP, TrypanoGEN and Baylor at high confident sites. The output VCF from this run was input to the selection step.
 
 ## selection
 
