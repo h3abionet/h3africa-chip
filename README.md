@@ -80,4 +80,5 @@ optional arguments:
 * `windowshopper.py` : takes our chips and a bunch of other chips, regions we're not happy about, and finds SNPs that other chips have that we don't that should be included.
 
 
-
+## evaluation
+Scripts used in the evaluation. Documentation on how to use the scripts are described in the folder.
